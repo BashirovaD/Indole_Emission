@@ -1,0 +1,480 @@
+| Startfile from command line: tddft_rpa.in
+
+
+|       ***********************************************************
+|       *                 TeraChem v1.9-2025.05-dev               *
+|       *                   Development Version                   *
+|       *           Chemistry at the Speed of Graphics!           *
+|       ***********************************************************
+|       * This program may only be used in connection with        *
+|       * a valid license from PetaChem, LLC. Use of this program *
+|       * or results thereof indicates acceptance of all terms    *
+|       * and conditions stated in the license and that a valid   *
+|       * license agreement between the user and PetaChem, LLC    *
+|       * exists. PetaChem, LLC does not warrant the correctness  *
+|       * of results or their suitability for any purpose.        *
+|       * Please email bugs, suggestions, and comments to         *
+|       *                  help@petachem.com                      *
+|       *                                                         *
+|       ***********************************************************
+
+
+|       ***********************************************************
+|       *  Compiled by zuehlsdt     Fri May 16 10:21:23 PDT 2025  *
+|       *  Supported architecture SMs: 75 80 86 89 90             *
+|       *  Build cuda_11.8.r11.8/compiler.31833905_0              *
+|       *  Git Version:                               *
+|       ***********************************************************
+
+
+| Job started   Fri Oct  3 02:00:49 2025
+| On zuehlsdorff04 (available memory: 177751 MB)
+
+| ######################################### RUNTIME INFO ##########################################
+| /shared/zuehlsdorff/research_software/TeraChem/build/bin/terachem  tddft_rpa.in 
+
+|  NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  560.28.03  Release Build  (dvs-builder@U16-A24-27-4)  Thu Jul 18 20:46:24 UTC 2024
+|  GCC version:  gcc version 8.5.0 20210514 (Red Hat 8.5.0-22) (GCC) 
+
+|  	linux-vdso.so.1 (0x00007ffdc61c2000)
+|  	libcurl.so.4 => /lib64/libcurl.so.4 (0x000014b4d0263000)
+|  	libz.so.1 => /lib64/libz.so.1 (0x000014b4d004b000)
+|  	libimf.so => /opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libimf.so (0x000014b4cfc61000)
+|  	libm.so.6 => /lib64/libm.so.6 (0x000014b4cf8df000)
+|  	libthcbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libthcbox.so.1 (0x000014b4cd5aa000)
+|  	libnvToolsExt.so.1 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libnvToolsExt.so.1 (0x000014b4cd3a0000)
+|  	libgpubox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libgpubox.so.1 (0x000014b4cd198000)
+|  	libcpubox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libcpubox.so.1 (0x000014b4ccf94000)
+|  	libtensorbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libtensorbox.so.1 (0x000014b4ccd79000)
+|  	libiobox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libiobox.so.1 (0x000014b4ccb74000)
+|  	libintbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libintbox.so.1 (0x000014b4665fa000)
+|  	libatmx2cbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libatmx2cbox.so.1 (0x000014b46633d000)
+|  	libperiodicbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libperiodicbox.so.1 (0x000014b448907000)
+|  	libsqmbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libsqmbox.so.1 (0x000014b44835b000)
+|  	libgridbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libgridbox.so.1 (0x000014b445986000)
+|  	libdftbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libdftbox.so.1 (0x000014b445688000)
+|  	libcibox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libcibox.so.1 (0x000014b444e0e000)
+|  	libccbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libccbox.so.1 (0x000014b444783000)
+|  	libsimbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/libsimbox.so.1 (0x000014b44455e000)
+|  	liboptbox.so.1 => /shared/zuehlsdorff/research_software/TeraChem/build/lib/liboptbox.so.1 (0x000014b44432b000)
+|  	libssl.so.1.1 => /lib64/libssl.so.1.1 (0x000014b444097000)
+|  	libcrypto.so.1.1 => /lib64/libcrypto.so.1.1 (0x000014b443bac000)
+|  	libpthread.so.0 => /lib64/libpthread.so.0 (0x000014b44398c000)
+|  	libcuda.so.1 => /lib64/libcuda.so.1 (0x000014b44180d000)
+|  	libcudart.so.11.0 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libcudart.so.11.0 (0x000014b441566000)
+|  	libcublas.so.11 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libcublas.so.11 (0x000014b43b908000)
+|  	libcufft.so.10 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libcufft.so.10 (0x000014b42aa2d000)
+|  	libcusparse.so.11 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libcusparse.so.11 (0x000014b419d35000)
+|  	libcusolver.so.11 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libcusolver.so.11 (0x000014b407a7d000)
+|  	libcublasLt.so.11 => /opt/ohpc/pub/apps/cuda/11.8/lib64/libcublasLt.so.11 (0x000014b3e34f7000)
+|  	libsvml.so => /opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libsvml.so (0x000014b3e1ec8000)
+|  	libirng.so => /opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libirng.so (0x000014b3e1bb1000)
+|  	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x000014b3e17d1000)
+|  	libiomp5.so => /opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so (0x000014b3e138f000)
+|  	libcilkrts.so.5 => /opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libcilkrts.so.5 (0x000014b3e1152000)
+|  	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x000014b3e0f3a000)
+|  	libintlc.so.5 => /opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libintlc.so.5 (0x000014b4d068f000)
+|  	libc.so.6 => /lib64/libc.so.6 (0x000014b3e0b64000)
+|  	/lib64/ld-linux-x86-64.so.2 (0x000014b4d04f2000)
+|  	libdl.so.2 => /lib64/libdl.so.2 (0x000014b3e0960000)
+|  	libnghttp2.so.14 => /lib64/libnghttp2.so.14 (0x000014b3e0739000)
+|  	libidn2.so.0 => /lib64/libidn2.so.0 (0x000014b3e051b000)
+|  	libssh.so.4 => /lib64/libssh.so.4 (0x000014b3e02ab000)
+|  	libpsl.so.5 => /lib64/libpsl.so.5 (0x000014b3e009a000)
+|  	libgssapi_krb5.so.2 => /lib64/libgssapi_krb5.so.2 (0x000014b3dfe45000)
+|  	libkrb5.so.3 => /lib64/libkrb5.so.3 (0x000014b3dfb5a000)
+|  	libk5crypto.so.3 => /lib64/libk5crypto.so.3 (0x000014b3df943000)
+|  	libcom_err.so.2 => /lib64/libcom_err.so.2 (0x000014b3df73f000)
+|  	libldap-2.4.so.2 => /lib64/libldap-2.4.so.2 (0x000014b3df4f0000)
+|  	liblber-2.4.so.2 => /lib64/liblber-2.4.so.2 (0x000014b3df2e0000)
+|  	libbrotlidec.so.1 => /lib64/libbrotlidec.so.1 (0x000014b3df0d3000)
+|  	librt.so.1 => /lib64/librt.so.1 (0x000014b3deecb000)
+|  	libunistring.so.2 => /lib64/libunistring.so.2 (0x000014b3deb4a000)
+|  	libkrb5support.so.0 => /lib64/libkrb5support.so.0 (0x000014b3de939000)
+|  	libkeyutils.so.1 => /lib64/libkeyutils.so.1 (0x000014b3de735000)
+|  	libresolv.so.2 => /lib64/libresolv.so.2 (0x000014b3de51d000)
+|  	libsasl2.so.3 => /lib64/libsasl2.so.3 (0x000014b3de2ff000)
+|  	libbrotlicommon.so.1 => /lib64/libbrotlicommon.so.1 (0x000014b3de0de000)
+|  	libselinux.so.1 => /lib64/libselinux.so.1 (0x000014b3ddeb3000)
+|  	libcrypt.so.1 => /lib64/libcrypt.so.1 (0x000014b3ddc8a000)
+|  	libpcre2-8.so.0 => /lib64/libpcre2-8.so.0 (0x000014b3dda06000)
+| #################################################################################################
+
+| Checking Amazon Cloud instance ID...   Not found
+| Cannot find license.dat file /shared/zuehlsdorff/research_software/TeraChem/build/license.dat
+
+
+| TRYING THE NETWORK LICENSE...
+| Connecting to license server '54.208.252.40' port '8877'...
+| Connected!
+| Checking your license...
+
+| **************************************************************
+|  Greetings, Martinez Group! You have 1000 licenses in total
+|  IN USE: 9
+|  AVAILABLE: 991
+| **************************************************************
+
+-----------------------------------
+Processed Input file:
+                    basis 6-31+g*
+                   method camb3lyp
+                   charge 0
+                 spinmult 1
+                    maxit 55
+                      run energy
+                      rpa yes
+             cisnumstates 2
+             cisguessvecs 3
+               cismaxiter 50
+                  threall 1.0e-14
+                 convthre 1.0e-5
+                 safemode no
+              coordinates snapshot.xyz
+             pointcharges ptcharges.xyz
+-----------------------------------
+Jobname: snapshot
+Scratch data will be generated
+Scratch directory: ./scr.snapshot
+| Random number seed: 1976150560
+
+XYZ coordinates snapshot.xyz
+Molden File Output: ./scr.snapshot/snapshot.molden
+Using basis set: 6-31+gs
+dmrgstart not found
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+Condition number limit for the DIIS overlap matrix is            0
+WF convergence threshold: 1.00e-05
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 55
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: DYNAMIC
+TeraChem will select linear algebra engine
+DFT Functional requested: camb3lyp
+Method: CAM-B3LYP 
+  Slater exchange functional:           0.35 
+  Full range Becke 1988 exchange:       0.35 
+  Full range Hartree-Fock exchange:     0.19 
+  SR Becke 1988 exchange functional:    0.46 
+  LR Hartree-Fock exchange:             0.46 
+  Range Correction Scaling:             0.330 a.u. 
+  Lee-Yang-Parr correlation functional: 0.81 
+  VWN(V) correlation functional:        0.19 
+Wavefunction: RESTRICTED
+DFT grid type: 1
+Using dynamic DFT grids.
+Initial guess generated by maximum overlap
+point charges coordinates file: ptcharges.xyz
+point charges self interaction: active
+
+
+********************************************
+***** SINGLE POINT ENERGY CALCULATIONS *****
+********************************************
+*************WARNING***************
+Unrecognized or unnecessary keywords:
+These are being ignored.
+   safemode no
+***********************************
+Starting TensorBox...
+| TeraChem will select linear algebra engine
+| Using cuSolver for matrix diagonalization
+
+| using 1 out of 1 CUDA devices
+|   Device 0: NVIDIA GeForce RTX 3080,  9906MB, CC 8.6 -- CPU THREAD 0
+| -------------------------------------------------------------------
+| CPU Memory Available: 24007.88 MegaWords 
+| GPU Memory Available: 982.25 MegaWords 
+| Maximum recommended basis set size: 11200 basis functions
+|  (limited by GPU memory)
+| -------------------------------------------------------------------
+| Initialize GPUBox with 128 MW of memory
+
+************************************* WARNING *************************************
+ 9 out of 221 eigenvalues of the overlap matrix are smaller than xtol = 1.0e-04
+ and will be flushed to zero. In many cases this is caused by bad geometry of the
+ molecule, Cartesian basis sets, or the use of diffuse basis functions. 
+ Try using a spherical basis representation 'sphericalbasis yes'. If the SCF procedure does not
+ converge, increase the threshold by setting 'xtol' to 1.0e-03 or 1.0e-02 and/or
+ decrease the coulomb and exchange integral screening thresholds 'threall' 
+ up to 1.0e-15 or 1.0e-16. In addition, you can try to loosen the the WF 
+ convergence threshold, perform several geometry optimization steps, and run the 
+ calculations again with the new geometry. You can also try to switch to double
+ precision instead of mixed (default) or single precision.
+***********************************************************************************
+
+
+
+Basis set:       6-31+gs
+Total atoms:     17
+Total charge:    0
+Total electrons: 74 (37-alpha, 37-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  221
+Total AO shells: 100 (56 S-shells; 33 P-shells; 11 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 514.613747704024 a.u.
+
+Number of MM point charges: 8541
+Total charge from MM point charges: 0.00 e
+MM Atom 0: charge = -0.834 e, xyz = (26.59222410, 10.69773882, 38.22348755) Bohr
+MM Atom 1: charge = 0.417 e, xyz = (25.48862412, 9.14060460, 37.94947729) Bohr
+MM Atom 2: charge = 0.417 e, xyz = (26.80009396, 10.61837033, 40.12266217) Bohr
+   ...
+MM Atom 8538: charge = -0.834 e, xyz = (1.36627189, -11.53110798, -14.46585244) Bohr
+MM Atom 8539: charge = 0.417 e, xyz = (2.86482460, -10.56923745, -14.36380723) Bohr
+MM Atom 8540: charge = 0.417 e, xyz = (1.44186093, -12.50809631, -12.87470315) Bohr
+
+
+**********************************************************
+*** WARNING! USING DEFAULT VDW PARAMETERS FOR QM ATOMS ***
+**********************************************************
+   TYPE       SIGMA       EPSILON
+     N      1.850000      0.200000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     N      1.850000      0.200000
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+
+************************************* WARNING *************************************
+ 9 out of 221 eigenvalues of the overlap matrix are smaller than xtol = 1.0e-04
+ and will be flushed to zero. In many cases this is caused by bad geometry of the
+ molecule, Cartesian basis sets, or the use of diffuse basis functions. 
+ Try using a spherical basis representation 'sphericalbasis yes'. If the SCF procedure does not
+ converge, increase the threshold by setting 'xtol' to 1.0e-03 or 1.0e-02 and/or
+ decrease the coulomb and exchange integral screening thresholds 'threall' 
+ up to 1.0e-15 or 1.0e-16. In addition, you can try to loosen the the WF 
+ convergence threshold, perform several geometry optimization steps, and run the 
+ calculations again with the new geometry. You can also try to switch to double
+ precision instead of mixed (default) or single precision.
+***********************************************************************************
+
+Setting up the DFT grid...
+| time to set the grid = 0.00 s
+DFT grid points: 17770 (1045 points/atom)
+Setting up the DFT grid...
+| time to set the grid = 0.01 s
+DFT grid points: 49339 (2902 points/atom)
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change      Electrons        XC Energy           Energy        Time(s)
+----------------------------------------------------------------------------------------------------------
+| Purifying guess...
+| Trace of guess  73.99999706, trace of guess*guess  73.99999411,  electron number  74.00000000 
+| Guess is well-conditioned: purify...
+| Purification run on GPU (double precision)  using TC2 purification.
+| Density matrix purification finished after a total of 0 matrix multiplies
+| THRESPDP set to 1.00e+00
+|                 >>> SWITCHING TO GRID 1 <<<
+|    1     0.4614274702   -1403.3186825074    73.9999998253   -44.2399056768   -1403.3186825074     0.32  
+|                 >>> SWITCHING TO GRID 0 <<<
+|    2     0.5110042107      +8.1074225088    74.0002738697   -49.0608557678   -1395.2112599986     0.19  
+|    3     0.5713034400      +0.8698767475    74.0005982160   -48.4641006181   -1394.3413832511     0.20  
+|    4     0.1685144874     -14.8561478633    74.0003708843   -47.3516850581   -1409.1975311144     0.57  
+|    5     0.1544578996      -0.0497658863    74.0006567110   -46.8621651034   -1409.2472970006     0.23  
+|    6     0.0132012371      -0.4890654810    74.0005180207   -46.9598345867   -1409.7363624816     0.20  
+|    7     0.0103110261      -0.0025098068    74.0004807152   -46.9675745560   -1409.7388722884     0.26  
+|    8     0.0035060149      -0.0028306383    74.0004860049   -46.9745793652   -1409.7417029267     0.20  
+| THRESPDP set to 2.39e-04
+|                 >>> SWITCHING TO GRID 1 <<<
+|    9     0.0019407115      +0.0001465232    74.0004382561   -46.9737825495   -1409.7415564035     0.48  
+|   10     0.0010737734      -0.0000686014    74.0004388158   -46.9751267762   -1409.7416250049     0.37  
+|   11     0.0001757525      -0.0000284910    74.0004393162   -46.9751196188   -1409.7416534959     0.38  
+|   12     0.0000901976      -0.0000011697    74.0004391188   -46.9755299788   -1409.7416546656     0.37  
+|   13     0.0000234186      -0.0000002844    74.0004391191   -46.9755218114   -1409.7416549500     0.36  
+|   14     0.0000094195      -0.0000001084    74.0004390956   -46.9755133044   -1409.7416550584     0.49  
+----------------------------------------------------------------------------------------------------------
+FINAL ENERGY: -1409.7416550584 a.u.
+| WARNING: Final energy is higher than the lowest energy by   4.7868e-05.
+HOMO-LUMO GAP: 7.027 eV
+CENTER OF MASS: {0.790956, 1.166578, 1.394475} ANGS
+QM  DIPOLE MOMENT: {5.578399, 3.933296, -0.370137} (|D| = 6.835668) DEBYE
+MM  DIPOLE MOMENT: {-0.987455, -7.248682, 17.842293} (|D| = 19.283824) DEBYE
+TOT DIPOLE MOMENT: {4.590944, -3.315386, 17.472156} (|D| = 18.366948) DEBYE
+Writing out molden info
+
+Running Mulliken population analysis...
+
+ Generating 2nd functional diffs
+
+  Restricted TDDFT (RPA) Parameters
+--------------------------------------------
+Number of occupied orbitals:            37
+Number of virtual orbitals:            175
+Number of molecular orbitals:          212
+Number of basis functions:             221
+Multiplicity of target state:      singlet
+
+  Nonsymmetric Davidson Diagonalization Parameters
+----------------------------------------------------
+Number of roots to find:                    2
+Number of guess vectors:                    3
+Maximum subspace size:                     20
+Number of vectors to save:                  2
+Collapse vectors per root:                  2
+Number of excitations:                  12950
+Maximum Davidson iterations:               50
+Residual convergence:                 1.0e-04
+Orthogonality tolerance:              1.0e-12
+Reorthogonalization rate:                   8
+
+     Davidson Dynamic Precision Parameters
+-----------------------------------------------
+SP Residual convergence:              1.0e-04
+Sigma vector THRESPDP:                2.4e-04
+
+Davidson memory usage:   4.93 MB
+
+Guess Vectors:
+  37 ->  38 : D -> V :     0.258222
+  36 ->  38 : D -> V :     0.275326
+  37 ->  39 : D -> V :     0.309359
+
+  Root           Eigenvalue       Energy Change        Residual
+-------------------------------------------------------------------
+Iteration:    0   Subspace Size:    3
+Root: 1:         0.19706877         0.19706877         0.19921860  
+Root: 2:         0.20967709         0.20967709         0.18504711  
+
+Iteration:    1   Subspace Size:    5
+Root: 1:         0.17040972        -0.02665906         0.04037406  
+Root: 2:         0.18352407        -0.02615302         0.05313914  
+
+Iteration:    2   Subspace Size:    7
+Root: 1:         0.16766413        -0.00274559         0.02566898  
+Root: 2:         0.17937983        -0.00414424         0.02797396  
+
+Iteration:    3   Subspace Size:    9
+Root: 1:         0.16686132        -0.00080280         0.01257367  
+Root: 2:         0.17845507        -0.00092476         0.01647486  
+
+Iteration:    4   Subspace Size:   11
+Root: 1:         0.16668817        -0.00017315         0.00600651  
+Root: 2:         0.17815152        -0.00030354         0.00996696  
+
+Iteration:    5   Subspace Size:   13
+Root: 1:         0.16665932        -0.00002885         0.00363852  
+Root: 2:         0.17805803        -0.00009349         0.00513951  
+
+Iteration:    6   Subspace Size:   15
+Root: 1:         0.16664814        -0.00001118         0.00160059  
+Root: 2:         0.17803053        -0.00002751         0.00261471  
+
+Iteration:    7   Subspace Size:   17
+Root: 1:         0.16664592        -0.00000221         0.00080875  
+Root: 2:         0.17802257        -0.00000795         0.00153089  
+
+Iteration:    8   Subspace Size:   19
+Collapsing subspace to 4 vectors
+Rebuilding sigma vectors
+
+Iteration:    9   Subspace Size:    4
+Root: 1:         0.16664520        -0.00000001         0.00039249  
+Root: 2:         0.17801991        -0.00000000         0.00090517  
+
+Iteration:   10   Subspace Size:    6
+Root: 1:         0.16664508        -0.00000011         0.00016933  
+Root: 2:         0.17801935        -0.00000055         0.00037038  
+
+Iteration:   11   Subspace Size:    8
+Root: 1:         0.16664504        -0.00000004         0.00011565  
+Root: 2:         0.17801911        -0.00000024         0.00026353  
+
+Iteration:   12   Subspace Size:   10
+Root: 1:         0.16664503        -0.00000001         0.00004782  Converged
+Root: 2:         0.17801905        -0.00000006         0.00011635  
+
+Iteration:   13   Subspace Size:   11
+Root: 1:         0.16664503        -0.00000000         0.00004701  Converged
+Root: 2:         0.17801904        -0.00000001         0.00007213  Converged
+
+Davidson has converged in single precision
+Collapsing subspace to 2 vectors
+Rebuilding sigma vectors in mixed precision
+
+Iteration:   14   Subspace Size:    2
+Root: 1:         0.16664503         0.00000000         0.00004701  Converged
+Root: 2:         0.17801904         0.00000000         0.00007213  Converged
+
+Davidson converged in 14 iterations
+32 sigma vectors were formed
+26 sigma vectors were formed in single precision
+2 sigma vectors were formed in mixed precision
+
+  Root   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)     Ex. Energy (nm)
+-----------------------------------------------------------------------------------------
+     1      -1409.57501002          0.16664503          4.53464136        273.41571459
+     2      -1409.56363602          0.17801904          4.84414365        255.94662262
+
+Unrelaxed excited state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1    10.1377     7.9020    -0.5084    12.8636
+     2     8.2899     5.6268    -0.7829    10.0497
+
+Transition dipole moments:
+
+  Root       Tx         Ty         Tz         |T| (a.u.)
+----------------------------------------------------------
+     1     0.4247    -0.5864    -0.3905     0.8226
+     2    -1.1949    -1.4164    -0.0904     1.8553
+
+Root 1: Largest CI coefficients:
+  37 ->  38 : X (D -> V) :  -0.916811     Y (D <- V) :   0.044532
+  36 ->  38 : X (D -> V) :   0.304481     Y (D <- V) :   0.005569
+  36 ->  41 : X (D -> V) :   0.131776     Y (D <- V) :   0.020583
+  37 ->  42 : X (D -> V) :   0.103742     Y (D <- V) :   0.011313
+
+Root 2: Largest CI coefficients:
+  36 ->  38 : X (D -> V) :  -0.874215     Y (D <- V) :   0.032046
+  37 ->  38 : X (D -> V) :  -0.334684     Y (D <- V) :   0.032003
+  37 ->  42 : X (D -> V) :  -0.207188     Y (D <- V) :  -0.030441
+  37 ->  41 : X (D -> V) :  -0.158804     Y (D <- V) :  -0.022692
+  37 ->  43 : X (D -> V) :   0.114324     Y (D <- V) :   0.020773
+
+  Final Excited State Results:
+
+  Root   Total Energy (a.u.)   Ex. Energy (eV)   Osc. (a.u.)   Max CI Coeff.      Excitation
+------------------------------------------------------------------------------------------------------
+     1       -1409.57501002        4.53464136       0.0752       -0.916811     37 ->  38 : X (D -> V)
+     2       -1409.56363602        4.84414365       0.4085       -0.874215     36 ->  38 : X (D -> V)
+
+Printing MM field on QM atoms:
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+        0.00000000000000         0.00000000000000         0.00000000000000
+| Total processing time: 26.53 sec 
+
+| Job finished: Fri Oct  3 02:01:18 2025
+
